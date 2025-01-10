@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chez les oiseaux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Bienvenue chez les oiseaux</h1>
+<h2>En voici quelques-un</h2>
+<ul>
+    <li>
+        <img class="Oiseaux" src="images/geai_des_chêne.png" alt="">
+        <h2>Le geai des chênes</h2>
+        <p class="description">Le geai des chênes est un oiseau de la famille des corvidés. Il est reconnaissable à son plumage coloré et à son cri rauque. C'est un oiseau très intelligent qui peut imiter le chant d'autres oiseaux. Il se nourrit de glands, de graines et d'insectes. Il vit dans les forêts de feuillus et de conifères. Il construit son nid dans les arbres. Il est présent dans toute l'Europe, en Asie et en Afrique du Nord.</p>
+        <a href="https://cdnfiles2.biolovision.net/www.oiseauxdesjardins.fr/userfiles/Fichesespces/FicheespceGDC.pdf">
+            <button class="info-button">Voir sa carte d'identité !</button>
+        </a>
+    </li>
+    <li>
+        <img class="Oiseaux" src="images/hirondelle.jpeg" alt="">
+        <h2>L'hirondelle de fenêtre</h2>
+        <p class="description">L'hirondelle de fenêtre est un oiseau de la famille des hirundinidés. Elle est reconnaissable à son plumage bleu et blanc</p>
+        <a href="https://cdnfiles2.biolovision.net/www.oiseauxdesjardins.fr/userfiles/Fichesespces/FicheespceHF.pdf">
+            <button class="info-button">Voir sa carte d'identité !</button>
+        </a>
+    </li>
+    <li>
+        <img class="Oiseaux" src="images/mesange%20a%20longue%20queue.png" alt="">
+        <h2> La mesange a longue queue</h2>
+        <p class="description">La mésange à longue queue est un oiseau de la famille des paridés. Elle est reconnaissable à son plumage noir et blanc et à sa longue queue. C'est un oiseau très sociable qui vit en groupe. Elle se nourrit de graines, de fruits et d'insectes. Elle construit son nid dans les arbres. Elle est présente dans toute l'Europe, en Asie et en Afrique du Nord.</p>
+        <a href="https://cdnfiles2.biolovision.net/www.oiseauxdesjardins.fr/userfiles/Fichesespces/FicheespceMLQ.pdf">
+            <button class="info-button">Voir sa carte d'identité !</button>
+        </a>
+    </li>
+</ul>
+<h2>Me contacter:</h2>
+<form action="contact.php" method="post">
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="user_name">
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_mail">
+    <label for="msg">Message :</label>
+    <textarea id="msg" name="user_message"></textarea>
+    <button type="submit">Envoyer</button>
+</form>
+
+</body>
+<footer>
+    <p>Site réalisé par Noé</p>
+</footer>
+</html>
