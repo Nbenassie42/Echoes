@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
         const result = await client.query(insertQuery, values);
         console.log('Data inserted successfully:', result.rows[0]);
 
-        res.redirect('/success.html');
+        res.redirect('/index.html');
     } catch (err) {
         console.error('Error inserting data:', err.message);
         res.status(500).send('Error inserting data: ' + err.message);
