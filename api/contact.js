@@ -7,7 +7,12 @@ module.exports = async (req, res) => {
         connectionString,
     });
 
-    const { name, email, hobby } = req.body;
+    const { user_name, user_mail, hobby } = req.body;
+
+    // Validate the input data
+    if (!user_name || !user_mail) {
+        return res.status(400).send('Name and email are required.');
+    }
 
     try {
         console.log('Connecting to the database...');
@@ -20,7 +25,7 @@ module.exports = async (req, res) => {
             RETURNING *;
         `;
 
-        const values = [name, email, hobby];
+        const values = [user_name, user_mail, hobby];
 
         const result = await client.query(insertQuery, values);
         console.log('Data inserted successfully:', result.rows[0]);
