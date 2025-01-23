@@ -9,7 +9,6 @@ module.exports = async (req, res) => {
 
     const { user_name, user_mail, hobby } = req.body;
 
-    // Validate the input data
     if (!user_name || !user_mail) {
         return res.status(400).send('Name and email are required.');
     }
@@ -30,7 +29,7 @@ module.exports = async (req, res) => {
         const result = await client.query(insertQuery, values);
         console.log('Data inserted successfully:', result.rows[0]);
 
-        res.status(200).send('Data inserted successfully!');
+        res.redirect('/success.html');
     } catch (err) {
         console.error('Error inserting data:', err.message);
         res.status(500).send('Error inserting data: ' + err.message);
