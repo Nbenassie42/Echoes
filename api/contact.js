@@ -8,11 +8,15 @@ module.exports = async (req, res) => {
     });
 
     try {
+        console.log('Connecting to the database...');
         await client.connect();
+        console.log('Connected to the database successfully!');
         res.status(200).send('Connected to the database successfully!');
     } catch (err) {
-        res.status(500).send('Connection failed: ' + err.message);
+        console.error('Connection failed:', err.message);
+        res.status(500).send('Connection failed: ' + err.messagxe);
     } finally {
         await client.end();
+        console.log('Database connection closed.');
     }
 };
